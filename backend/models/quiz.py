@@ -21,8 +21,10 @@ class Quiz(db.Model):
 
     max_attempts = db.Column(db.Integer, nullable=False)
 
-    status = db.Column(db.Enum("Draft", "Published", "Unpublished"), default="Draft")
-
+    status = db.Column(
+    db.Enum("Draft", "Published", "Unpublished", name="quiz_status"),
+    default="Draft"
+)
     thumbnail = db.Column(db.String(255))
 
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
