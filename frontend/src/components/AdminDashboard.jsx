@@ -2158,7 +2158,7 @@ function CategoryManagement({ headers }) {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/categories",
+        "https://quiz-management-platform-e7x3.onrender.com/api/categories",
         {
           headers
         }
@@ -2205,9 +2205,8 @@ function CategoryManagement({ headers }) {
     try {
 
       const url = editingId
-        ? `http://localhost:5000/api/categories/${editingId}`
-        : "http://localhost:5000/api/categories";
-
+  ? `https://quiz-management-platform-e7x3.onrender.com/api/categories/${editingId}`
+  : "https://quiz-management-platform-e7x3.onrender.com/api/categories";
       const method = editingId
         ? "PUT"
         : "POST";
@@ -2287,7 +2286,7 @@ function CategoryManagement({ headers }) {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/categories/${id}`,
+        `https://quiz-management-platform-e7x3.onrender.com/api/categories/${id}`,
         {
           method: "DELETE",
           headers
